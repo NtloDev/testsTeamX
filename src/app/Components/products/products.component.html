@@ -1,0 +1,29 @@
+<div fxLayout="row" fxLayoutAlign="start">
+  <button (click)="showForm()" class="productAddButton"><mat-icon class="icon-display">add_box</mat-icon> <br> <span>New Product</span></button>
+</div>
+<div fxLayout="row" fxLayoutAlign="center center">
+    <h2>List Of Products</h2>
+</div>
+<div fxLayout="row" fxLayoutAlign="center center" *ngIf="spinner">
+  <mat-spinner></mat-spinner>
+</div>
+<div *ngIf="products" fxLayout="row" fxLayoutAlign="center center">
+  <div fxFlex="99" class="productDiv" fxLayout="row wrap" fxLayoutAlign="space-evenly.">
+    <div *ngFor="let product of products" fxLayout="row wrap" fxFlex="20" >
+      <mat-card class="matcard">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{product.name}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image class="productImage" [src]="product.image" alt="Product Image">
+        <mat-card-subtitle><span>Quantity : {{product.quantity}}</span></mat-card-subtitle>
+        <mat-card-content>
+          <span>Price : {{product.price}}$</span>
+        </mat-card-content>
+        <mat-card-actions class="productActions">
+          <mat-icon (click)="showUpdateForm(product._id || '')" class="updateIcon">create</mat-icon><mat-icon class="deleteIcon" (click)="deleteProduct(product._id || '')">delete</mat-icon>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

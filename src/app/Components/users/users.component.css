@@ -1,0 +1,41 @@
+table {
+  width: 80%;
+}
+.example-container {
+  overflow-x: scroll;
+}
+button{
+  padding: 0.4%;
+  margin: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #3c54b4;
+  border-radius: 5px;
+  width: 7%;
+  margin-top: 1%;
+  transition: 0.3s;
+}
+button:hover{
+  cursor: pointer;
+  background-color: #4480cf;
+  color: white;
+  border: 1px white ;
+}
+.updateIcon {
+  margin-right: 4px;
+  transition: 0.3s;
+  color: #4480cf;
+}
+.deleteIcon {
+  margin-right: 4px;
+  transition: 0.3s;
+  color: crimson;
+}
+.updateIcon:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+.deleteIcon:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}

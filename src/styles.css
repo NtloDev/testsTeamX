@@ -1,0 +1,86 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+h2 {
+  color: #3c54b4;
+}
+button{
+  padding: 0.4%;
+  margin: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #3c54b4;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 3%;
+  transition: 0.3s;
+}
+button:hover{
+  cursor: pointer;
+  background-color: #4480cf;
+  color: white;
+  border: 1px white ;
+}
+.icon-display {
+  transform: scale(1);
+}
+.matcard{
+  width: 100%;
+  position: relative;
+  margin-top: 7%;
+  margin-left: 3%;
+  text-align: center;
+  background-color: snow;
+}
+.productImage{
+  width: 75%;
+  height: 200px;
+}
+.productDiv{
+  border-radius: 10px;
+  height: 700px;
+  overflow: scroll;
+}
+.productActions{
+  background-color: #eceefc;
+}
+.productAddButton{
+  padding: 0.4%;
+  margin: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #3c54b4;
+  border-radius: 5px;
+  width: 7%;
+  margin-top: 1%;
+  transition: 0.3s;
+}
+.productAddButton:hover{
+  cursor: pointer;
+  background-color: #4480cf;
+  color: white;
+  border: 1px white ;
+}
+.icon-display {
+  transform: scale(1);
+}
+.updateIcon {
+  margin-right: 4px;
+  transition: 0.3s;
+  color: #3c54b4;
+}
+.deleteIcon {
+  margin-right: 4px;
+  transition: 0.3s;
+  color: crimson;
+}
+.updateIcon:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+.deleteIcon:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}

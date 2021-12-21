@@ -1,0 +1,21 @@
+<form [formGroup]="userAddForm" (ngSubmit)="onSubmit()"  >
+  <mat-grid-list cols="1" rowHeight="300px" >
+    <mat-grid-tile>
+      <div>
+        <mat-form-field>
+          <input formControlName="firstname" matInput placeholder="First Name">
+          <mat-error>The First Name is required</mat-error>
+        </mat-form-field><br>
+        <mat-form-field>
+          <input formControlName="lastname" matInput placeholder="Last Name">
+          <mat-error>The Last Name is required</mat-error>
+        </mat-form-field><br>
+        <mat-form-field>
+          <input formControlName="address" matInput placeholder="Address">
+          <mat-error>The Address is required</mat-error>
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <button type="submit" [disabled]="userAddForm.invalid" class="button"><span>Add User</span> <mat-icon class="icon-display">add_box</mat-icon> </button>
+</form>

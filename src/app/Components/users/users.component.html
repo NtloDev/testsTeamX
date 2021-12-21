@@ -1,0 +1,40 @@
+<div fxLayout="row" fxLayoutAlign="start">
+  <button (click)="showForm()" class="button"><mat-icon class="icon-display">add_box</mat-icon><br><span>New User</span></button>
+</div>
+<div fxLayout="row" fxLayoutAlign="center center">
+  <h2>List Of Users</h2>
+</div>
+<div fxLayout="row" fxLayoutAlign="center center">
+  <table mat-table [dataSource]="users" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="firstname">
+      <th style="color: white ; background-color: #3c54b4;" mat-header-cell *matHeaderCellDef> First Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.firstname}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="lastname">
+      <th style="color: white ; background-color: #3c54b4;" mat-header-cell *matHeaderCellDef> Last Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.lastname}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="address">
+      <th style="color: white ; background-color: #3c54b4;" mat-header-cell *matHeaderCellDef> Address </th>
+      <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="actions">
+      <th style="color: white ; background-color: #3c54b4;" mat-header-cell *matHeaderCellDef> Actions </th>
+      <td  mat-cell *matCellDef="let element"><mat-icon class="updateIcon" (click)="showUpdateForm(element._id)">create</mat-icon><mat-icon class="deleteIcon"  (click)="deleteUser(element._id)">remove_circle</mat-icon></td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
